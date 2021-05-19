@@ -1,6 +1,6 @@
 # UI Developer Interview Exercise
 
-You will be building a small React app to show client and sales data. The user will be able to interacat with this data by filtering and browsing through it based on basic criteria.
+You will be building a small React app to show client and sales data. The user will be able to interact with this data by filtering and browsing through it based on basic criteria.
 
 Use the following design mock up as a reference for the app look and feel:
 - [Design Mock Up](design-mockup.png)
