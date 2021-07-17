@@ -17,20 +17,31 @@ export default ({ sortedClientData = [], setMinRange, setCompany }: {
     <Section>
       <form className="pure-form pure-form-stacked filter-form">
         <fieldset>
-          <input placeholder="Company" className="pure-input-1 app-input" ref={inpRef} />
-          <div>
-            <label style={{ marginBottom: '0.5rem' }}>Minimum Sales ($)</label>
-            <RangeSlider min={min} max={max} setRange={_setMinRange} />
+          <div className="pure-g" style={{ alignItems: 'center' }}>
+            <div className="pure-u-1 pure-u-md-1-4">
+              <input placeholder="Company" className="pure-input-1 app-input" ref={inpRef} />
+            </div>
+            <div className="pure-u-0 pure-u-md-1-24" />
+            <div className="pure-u-1 pure-u-md-1-2">
+              <label style={{ marginBottom: '0.5rem' }}>Minimum Sales ($)</label>
+              {
+                (max && <RangeSlider min={min} max={max} setRange={_setMinRange} />) || ''
+              }
+            </div>
+            <div className="pure-u-0 pure-u-md-1-24" />
+            <div className="pure-u-1 pure-u-md-1-8">
+              <button className="pure-input-1 pure-button pure-button-primary app-btn" onClick={(e) => {
+                e.preventDefault();
+                setMinRange(minRange);
+                if (inpRef.current) {
+                  setCompany(inpRef.current.value);
+                }
+              }}>Filter Results</button>
+            </div>
           </div>
-          <button className="pure-input-1 pure-button pure-button-primary app-btn" onClick={(e) => {
-            e.preventDefault();
-            setMinRange(minRange);
-            if (inpRef.current) {
-              setCompany(inpRef.current.value);
-            }
-          }}>Filter Results</button>
         </fieldset>
       </form>
     </Section>
+
   );
 }

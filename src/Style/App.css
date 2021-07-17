@@ -12,23 +12,6 @@ body {
   padding: 0 1em 1em;
 }
 
-.progress-bar {
-  height: 0.5rem;
-  border-radius: 2rem;
-  background-color: #e1e2e5;
-}
-
-.progress-indicator {
-  background-color: #309ab5;
-}
-
-.progress-indicator::after {
-  content: '';
-  height: 2rem;
-  width: 2rem;
-  border-radius: 4rem;
-}
-
 .app-btn {
   background:linear-gradient(to right, #404246,#222426);
   border: 2px solid rgba(0,0,0,0.7);
@@ -44,63 +27,17 @@ body {
   padding: 1rem;
 }
 
-.filter-form > fieldset > *{
+.filter-form > fieldset > div > *{
   margin-bottom: 1rem !important;
 }
 
-.filter-form > fieldset > *:last-child{
+.filter-form > fieldset > div > *:last-child{
   margin-bottom: 0 !important;
-}
-
-.range-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.range-slider {
-  appearance: none;
-  width: 100%;
-  height: 0.4rem;
-  border: 0;
-  border-radius: 0.25rem;
-}
-
-.range-slider::-webkit-slider-thumb {
-  appearance: none;
-  background-color: #309ab5;
-  height: 1.5rem;
-  width: 1.5rem;
-  border-radius: 2rem;
-}
-
-.range-status-container {
-  width: 4rem;
-  max-width: 100px;
-}
-
-.range-status {
-  border: 1px solid #404246 !important;
-  border-radius: 7px !important;
-  background-color: #ECEDED;
-  line-height: 2rem;
-  text-align: center;
 }
 
 .row-space-between {
   display: flex;
   justify-content: space-between;
-}
-
-.section > .section-header {
-  align-items: baseline;
-}
-
-.section > .body {
-  overflow: auto;
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 0.1rem 0.8rem 0 rgba(181, 181, 181, 0.25);
 }
 
 .app-input {
@@ -116,7 +53,7 @@ body {
 }
 
 .app-table tr {
-  border-bottom: 1px solid rgba(0,0,0,0.25);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .app-table thead{
@@ -201,4 +138,9 @@ body {
 
 .top-sales-body > div{
   padding: 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.top-sales-body > div:last-child{
+  border-bottom: 0;
 }

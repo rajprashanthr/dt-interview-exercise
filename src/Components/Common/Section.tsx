@@ -1,4 +1,5 @@
 import React, { ReactChild, ReactChildren } from 'react';
+import '../../Style/Section.css';
 
 export default (props: {
   children: ReactChild | ReactChildren

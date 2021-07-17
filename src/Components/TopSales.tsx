@@ -7,9 +7,10 @@ const TopSales = ({ clientData }: { clientData: any[] }) => {
 
   const filteredData = useMemo(() => clientData.filter((e: any) => e.sales >= 800), [clientData]);
 
-  const perc = (filteredData.length / clientData.length) * 100;
+  const perc = clientData.length ? (filteredData.length / clientData.length) * 100 : 0;
 
   const avgMonthSales = useMemo(() => {
+    if (!filteredData.length) return 0;
     const total = filteredData.reduce((a, c) => a + c.sales, 0);
     return Math.round(total / filteredData.length);
   }, [filteredData]);
