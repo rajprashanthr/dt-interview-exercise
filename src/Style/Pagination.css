@@ -1,0 +1,36 @@
+.pagination-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.pagination-container .dir {
+  color: #309ab5;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  width: 1rem;
+  line-height: 1rem;
+}
+
+.pagination-container .dir.disabled {
+  color: #ccc;
+}
+
+
+.pagination-container .pgnum {
+  color: #309ab5;
+  padding: 0.5rem;
+  display: inline-block;
+  width: 1rem;
+  line-height: 1rem;
+  text-align: center;
+}
+
+.pagination-container .pgnum.active {
+  color: #fff;
+  background-color: #309ab5;
+  border-radius: 1rem;
+}

@@ -1,0 +1,204 @@
+html {
+  font-size: 18px;
+}
+
+body {
+  box-sizing: border-box;
+  color: #222426;
+  background-color: #ECEDED;
+}
+
+.app-container {
+  padding: 0 1em 1em;
+}
+
+.progress-bar {
+  height: 0.5rem;
+  border-radius: 2rem;
+  background-color: #e1e2e5;
+}
+
+.progress-indicator {
+  background-color: #309ab5;
+}
+
+.progress-indicator::after {
+  content: '';
+  height: 2rem;
+  width: 2rem;
+  border-radius: 4rem;
+}
+
+.app-btn {
+  background:linear-gradient(to right, #404246,#222426);
+  border: 2px solid rgba(0,0,0,0.7);
+  border-radius: 0.5rem;
+}
+
+.app-btn:hover,.app-btn:focus {
+  box-shadow: 0 0.1rem 0.5rem 0 #333;
+  background:linear-gradient(to right, #404246,#222426);
+}
+
+.filter-form {
+  padding: 1rem;
+}
+
+.filter-form > fieldset > *{
+  margin-bottom: 1rem !important;
+}
+
+.filter-form > fieldset > *:last-child{
+  margin-bottom: 0 !important;
+}
+
+.range-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.range-slider {
+  appearance: none;
+  width: 100%;
+  height: 0.4rem;
+  border: 0;
+  border-radius: 0.25rem;
+}
+
+.range-slider::-webkit-slider-thumb {
+  appearance: none;
+  background-color: #309ab5;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 2rem;
+}
+
+.range-status-container {
+  width: 4rem;
+  max-width: 100px;
+}
+
+.range-status {
+  border: 1px solid #404246 !important;
+  border-radius: 7px !important;
+  background-color: #ECEDED;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.row-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section > .section-header {
+  align-items: baseline;
+}
+
+.section > .body {
+  overflow: auto;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0.1rem 0.8rem 0 rgba(181, 181, 181, 0.25);
+}
+
+.app-input {
+  border: 1px solid #404246 !important;
+  border-radius: 10px !important;
+  background-color: #ECEDED;
+  line-height: 1.5rem;
+}
+
+.app-table {
+  border: 0;
+  width:100%;
+}
+
+.app-table tr {
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+}
+
+.app-table thead{
+  background: none;
+  border-bottom: 2px solid rgba(0,0,0,0.25);
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.5);
+}
+
+.app-table th, .app-table td {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.app-table th.th-sales, .app-table td.td-sales {
+  text-align: right;
+}
+
+.app-table td.td-name.top::after {
+  content: '';
+  background: url('../assets/icons/star.png');
+  height: 20px;
+  width: 20px;
+  margin-left:5px;
+  display: inline-block;
+  background-size: contain;
+  position: absolute;
+  animation: fade 2s linear infinite;
+}
+
+@keyframes fade {
+  0% {opacity: 0.25;}
+  40% {opacity: 1;}
+  50% {opacity: 1;}
+  60% {opacity: 1;}
+  100% {opacity: 0.25;}
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+}
+
+.loader {
+  border: 5px solid #f3f3f3;
+  animation: spin 0.5s linear infinite;
+  border-top: 5px solid #333;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(180deg);}
+  100% {transform: rotate(360deg);}
+}
+
+.client-sales-footer {
+  padding: 0.8rem;
+  border-top: 1px solid rgba(0,0,0,0.25);
+  background-color: #eff2f2;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.client-sales-footer > div {
+  margin-bottom: 0.5rem;
+  align-items: baseline;
+}
+
+.client-sales-footer > div:last-child{
+  margin-bottom: 0;
+}
+
+.client-sales-footer label {
+  font-weight: bold;
+}
+
+.top-sales-body > div{
+  padding: 1rem;
+}
