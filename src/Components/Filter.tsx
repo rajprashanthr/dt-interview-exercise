@@ -29,7 +29,7 @@ export default ({ sortedClientData = [], setMinRange, setCompany }: {
               }
             </div>
             <div className="pure-u-0 pure-u-md-1-24" />
-            <div className="pure-u-1 pure-u-md-1-8">
+            <div className="pure-u-1 pure-u-md-1-6">
               <button className="pure-input-1 pure-button pure-button-primary app-btn" onClick={(e) => {
                 e.preventDefault();
                 setMinRange(minRange);
